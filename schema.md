@@ -1,7 +1,4 @@
----
-# 📄 2. SCHEMA.md (Database Schema & Codebook)
 
-```markdown
 # 🗄️ Database Schema & Codebook
 
 ## Overview
