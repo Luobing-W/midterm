@@ -24,6 +24,7 @@ install.packages(c("shiny", "DBI", "RPostgres", "dplyr"))
 ### Step 2: check your connection
 My Supabase connection is Not IPv4 compatible. If the Wi-Fi does not work, try to use a hotspot.
 
-### Step 3: RUN the code in app.R
+### Step 3: Download .env and app.R to the same folder. RUN the code in app.R
 
 ### Note: after you submit a new report, please reload the page so that the new input will be included in the recent 10 records
+### After you download .env file, make sure it does not turn into a txt file
