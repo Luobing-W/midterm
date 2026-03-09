@@ -21,7 +21,7 @@ A Shiny web application for tracking and reporting park injury incidents. The ap
 install.packages(c("shiny", "DBI", "RPostgres", "dplyr"))
 
 ### Step 2: check your connection
-My Supabase connection is Not IPv4 compatible. If the Wi-Fi does not work, try to use a hotspot.
+####My Supabase connection is Not IPv4 compatible. If the Wi-Fi does not work, try to use a hotspot.
 
 ### Step 3: RUN the code in app.R
 
