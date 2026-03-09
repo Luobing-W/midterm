@@ -10,7 +10,6 @@ library(dplyr)
 # ============================================
 # 1. Load Environment Variables
 # ============================================
-# Note: Ensure .env file is in the same directory as app.R
 readRenviron(".env")
 
 # ============================================
@@ -246,11 +245,22 @@ server <- function(input, output, session) {
         ORDER BY report_date DESC 
         LIMIT 10
       ")
+      
+      # ✅ FIX DATE DISPLAY: Convert date to character format
+      if(nrow(data) > 0) {
+        data$report_date <- format(as.Date(data$report_date), "%Y-%m-%d")
+      }
+      
       return(data)
     }, finally = {
       if (!is.null(con)) dbDisconnect(con)
     })
-  })
+  },
+  na.strings = "",
+  striped = TRUE,
+  hover = TRUE,
+  width = "100%",
+  rownames = FALSE)
 }
 
 # ============================================
